@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\UserDC\Desktop\MATERIAS DE ESTUDOS E PROJETOS\Todolist\out\artifacts\TodoList_jar\TodoList.jar</jar>
+  <outfile>C:\Users\UserDC\Desktop\MATERIAS DE ESTUDOS E PROJETOS\Todolist\todoList.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\UserDC\Downloads\Thumbnails-80_icon-icons.com_57262.ico</icon>
+  <singleInstance>
+    <mutexName>TodoListApp</mutexName>
+    <windowTitle>TodoListApp</windowTitle>
+  </singleInstance>
+  <jre>
+    <path>C:\Program Files\Java\jdk-21</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion></minVersion>
+    <maxVersion></maxVersion>
+  </jre>
+</launch4jConfig>

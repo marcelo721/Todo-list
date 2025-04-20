@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TodoList:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/TodoList_jar2</output-path>
+    <root id="archive" name="TodoList.jar">
+      <element id="module-output" name="TodoList" />
+      <element id="artifact" artifact-name="TodoList:jar" />
+    </root>
+  </artifact>
+</component>
