@@ -147,7 +147,7 @@ public class TodoListApp extends JFrame {
                 }
 
                 if (!horario.matches("\\d{2}:\\d{2}-\\d{2}:\\d{2}")) {
-                    JOptionPane.showMessageDialog(panel, "Horário inválido. Use o formato HH:mm.", "Erro", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(panel, "Horário inválido. Use o formato HH:mm-HH:mm", "Erro", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
