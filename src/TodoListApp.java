@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+
+import java.io.*;
 import java.util.*;
 import java.util.List;
 import java.time.DayOfWeek;
@@ -95,6 +97,27 @@ public class TodoListApp extends JFrame {
             // Add popup menu for delete option
             JPopupMenu popupMenu = new JPopupMenu();
             JMenuItem deleteItem = new JMenuItem("Excluir");
+            JMenuItem editItem = new JMenuItem("Editar");
+            editItem.addActionListener(e -> {
+                Task selected = taskList.getSelectedValue();
+                if (selected != null) {
+                    String newDesc = JOptionPane.showInputDialog(panel, "Nova descrição:", selected.getDescription());
+                    if (newDesc == null || newDesc.trim().isEmpty()) return;
+
+                    String newHorario = JOptionPane.showInputDialog(panel, "Novo horário (HH:mm-HH:mm):", selected.getHorario());
+                    if (newHorario == null || !newHorario.matches("\\d{2}:\\d{2}-\\d{2}:\\d{2}")) {
+                        JOptionPane.showMessageDialog(panel, "Horário inválido.", "Erro", JOptionPane.ERROR_MESSAGE);
+                        return;
+                    }
+
+                    selected.setDescription(newDesc.trim());
+                    selected.setHorario(newHorario.trim());
+                    taskList.repaint();
+                    saveTasks();
+                }
+            });
+            popupMenu.add(editItem);
+
             deleteItem.addActionListener(e -> {
                 Task selected = taskList.getSelectedValue();
                 if (selected != null) {
